@@ -12,7 +12,7 @@ qplot(total.steps, binwidth=1000, xlab="total number of steps taken each day")
 mean(total.steps, na.rm=TRUE)
 median(total.steps, na.rm=TRUE)
 
-![alt text] (https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/Total_Number_of_steps.png)
+![alt text](https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/Total_Number_of_steps.png "Steps taken per day")
 
 ## What is the average daily activity pattern?
 
@@ -24,7 +24,7 @@ ggplot(data=averages, aes(x=interval, y=steps)) +
     xlab("5-minute interval") +
     ylab("average number of steps taken")
     
-  ![alt text] (https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/5%20minute%20Interval%20steps.png)
+  ![alt text](https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/5%20minute%20Interval%20steps.png "Average Daily Activity pattern")
   
   ### On average across all the days in the dataset, the 5-minute interval contains the maximum number of steps?
   averages[which.max(averages$steps),]
@@ -51,7 +51,7 @@ qplot(total.steps, binwidth=1000, xlab="total number of steps taken each day")
 mean(total.steps)
 median(total.steps)
 
-![alt text] (https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/Total%20Number%20of%20steps%20(replacing%20mssing%20with%20mean%20value).png)
+![alt text](https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/Total%20Number%20of%20steps%20(replacing%20mssing%20with%20mean%20value).png "Steps taken after handling Missing Value")
 
 ## Are there differences in activity patterns between weekdays and weekends?
 weekday.or.weekend <- function(date) {
@@ -66,4 +66,4 @@ weekday.or.weekend <- function(date) {
 filled.data$date <- as.Date(filled.data$date)
 filled.data$day <- sapply(filled.data$date, FUN=weekday.or.weekend)
 
-![alt text] (https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/steps%20taken%20on%20weekdays%20and%20weekends.png)
+![alt text](https://github.com/poornima-sundar/ReproducibleResearch_Project1/blob/master/figure/steps%20taken%20on%20weekdays%20and%20weekends.png "Difference between Weekdays and Weekends")
